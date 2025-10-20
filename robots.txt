@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+# Evita que o Google indexe pastas técnicas (ajuste se não existirem)
+Disallow: /node_modules/
+Disallow: /vendor/
+
+# Sitemap do site
+Sitemap: https://www.seusite.com.br/sitemap.xml

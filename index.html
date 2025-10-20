@@ -1,0 +1,402 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <!-- ===================== META BÁSICO ===================== -->
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Elvis Godoy • Personal Trainer em Iperó — Treinos personalizados</title>
+  <meta name="description" content="Treinos personalizados com foco em musculação, saúde e qualidade de vida em Iperó e região. Viva o seu melhor com acompanhamento profissional.">
+  <meta name="author" content="Cleberson Godoy">
+  <meta name="theme-color" content="#f58220"><!-- cor da barra do navegador em mobile -->
+
+  <!-- Canonical (troque pelo domínio final) -->
+  <link rel="canonical" href="https://www.seusite.com.br/">
+
+  <!-- ===================== OPEN GRAPH / TWITTER ===================== -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.seusite.com.br/"><!-- troque pelo domínio final -->
+  <meta property="og:title" content="Elvis Godoy • Personal Trainer">
+  <meta property="og:description" content="Treinos personalizados para resultados reais. Viva o seu melhor com acompanhamento profissional em Iperó e região.">
+  <meta property="og:image" content="https://www.seusite.com.br/assets/img/opengraph.jpg"><!-- imagem já entregue -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Elvis Godoy • Personal Trainer">
+  <meta name="twitter:description" content="Treinos personalizados para resultados reais. Viva o seu melhor!">
+  <meta name="twitter:image" content="https://www.seusite.com.br/assets/img/opengraph.jpg">
+
+  <!-- ===================== FONTES ===================== -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Poppins:wght@700;800;900&display=swap" rel="stylesheet">
+
+  <!-- ===================== CSS ===================== -->
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- ===================== FAVICONS / MANIFEST ===================== -->
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/img/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon-16x16.png">
+  <link rel="manifest" href="assets/img/site.webmanifest">
+
+  <!-- ===================== JSON-LD: Person ===================== -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Person",
+    "name":"Elvis Godoy",
+    "jobTitle":"Personal Trainer",
+    "description":"Educador Físico especializado em musculação e qualidade de vida. Treinos personalizados que unem força, saúde e bem‑estar.",
+    "image":"https://www.seusite.com.br/assets/img/opengraph.jpg",
+    "url":"https://www.seusite.com.br/",
+    "telephone":"+55 15 99789-7433",
+    "areaServed":{"@type":"AdministrativeArea","name":"Iperó e região"},
+    "sameAs":["https://www.instagram.com/elvis.godoyy/"]
+  }
+  </script>
+
+  <!-- ===================== JSON-LD: FAQPage ===================== -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "mainEntity":[
+      {"@type":"Question","name":"Como funciona a aula experimental?","acceptedAnswer":{"@type":"Answer","text":"Conversa rápida para entender objetivos, avaliação leve de movimentos e treino inicial adaptado ao seu nível. Sem compromisso."}},
+      {"@type":"Question","name":"Atende em quais locais?","acceptedAnswer":{"@type":"Answer","text":"Atendo em Iperó e região. No online, acompanho clientes de qualquer cidade."}},
+      {"@type":"Question","name":"Preciso de equipamentos para o treino online?","acceptedAnswer":{"@type":"Answer","text":"Não necessariamente. Adaptamos com itens simples (elástico, peso corporal). Se houver academia disponível, também montamos o plano completo."}},
+      {"@type":"Question","name":"Como são feitos os ajustes de treino?","acceptedAnswer":{"@type":"Answer","text":"Acompanhamento semanal com feedbacks, vídeos e relatório de evolução. Ajusto cargas, volumes e exercícios conforme resposta do seu corpo."}}
+    ]
+  }
+  </script>
+</head>
+
+<body>
+  <!-- =========================================================
+       HEADER — sticky com troca de tema e redes sociais
+       ========================================================= -->
+  <header class="site-header" id="siteHeader">
+    <div class="container header-inner">
+      <!-- Marca -->
+      <a class="brand" href="#inicio" title="Elvis Godoy">
+        <!-- O JS troca o arquivo conforme o tema (claro/escuro) -->
+        <img id="brandLogo" src="assets/img/logo-light.png" alt="Elvis Godoy Personal Trainer" width="120" height="34">
+      </a>
+
+      <!-- Navegação desktop -->
+      <nav class="nav" aria-label="Principal">
+        <a class="nav-link" href="#inicio">Home</a>
+        <a class="nav-link" href="#sobre">Sobre</a>
+        <a class="nav-link" href="#servicos">Serviços</a>
+        <a class="nav-link" href="#contato">Contato</a>
+
+        <!-- Alternar tema -->
+        <button class="btn btn-ghost icon-only" id="btnTheme" aria-label="Alternar tema">
+          <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z" fill="currentColor"/>
+          </svg>
+        </button>
+
+        <!-- Ícones sociais em SVG (sem Font Awesome) -->
+        <div class="socials" aria-label="Redes sociais">
+          <a id="headerInsta" data-link="insta" href="https://www.instagram.com/elvis.godoyy/" target="_blank" rel="noopener" title="Instagram" aria-label="Instagram">
+            <!-- Instagram SVG -->
+            <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path fill="currentColor" d="M7 2h10a5 5 0 015 5v10a5 5 0 01-5 5H7a5 5 0 01-5-5V7a5 5 0 015-5zm0 2a3 3 0 00-3 3v10a3 3 0 003 3h10a3 3 0 003-3V7a3 3 0 00-3-3H7zm5 3.5a5.5 5.5 0 110 11 5.5 5.5 0 010-11zm0 2a3.5 3.5 0 100 7 3.5 3.5 0 000-7zM18 6.8a1 1 0 110 2 1 1 0 010-2z"/></svg>
+          </a>
+          <a id="headerWhats" data-link="whats" href="https://wa.me/5515997897433?text=Ol%C3%A1%20Elvis!%20Vim%20pelo%20site%20e%20quero%20agendar%20uma%20aula%20experimental." target="_blank" rel="noopener" title="WhatsApp" aria-label="WhatsApp">
+            <!-- WhatsApp SVG -->
+            <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path fill="currentColor" d="M20.52 3.48A11.86 11.86 0 0012.06 0C5.48 0 .2 5.25.2 11.74a11.5 11.5 0 001.56 5.8L0 24l6.65-1.73a12.05 12.05 0 005.41 1.31h.01c6.58 0 11.94-5.25 11.94-11.74 0-3.14-1.28-6.09-3.49-8.36zM12.07 21.4h-.01a9.96 9.96 0 01-5.07-1.39l-.36-.21-3.95 1.03 1.06-3.85-.24-.4A9.5 9.5 0 1121.57 12c0 5.25-4.42 9.4-9.5 9.4zm5.5-7.24c-.3-.15-1.77-.87-2.05-.97-.27-.1-.46-.15-.66.15-.2.3-.76.97-.93 1.18-.17.2-.34.22-.64.07-.3-.15-1.26-.46-2.41-1.48-.89-.77-1.49-1.72-1.66-2.02-.17-.3-.02-.46.13-.61.13-.13.3-.34.44-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.66-1.6-.9-2.18-.24-.58-.48-.5-.66-.5h-.56c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.87 1.22 3.07c.15.2 2.1 3.2 5.08 4.48.71.31 1.26.49 1.69.63.71.22 1.35.19 1.86.12.57-.08 1.77-.72 2.02-1.41.25-.7.25-1.3.17-1.41-.07-.11-.27-.18-.57-.33z"/></svg>
+          </a>
+        </div>
+      </nav>
+
+      <!-- Botão burger (mobile) -->
+      <button class="burger" id="burger" aria-label="Abrir menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+    <!-- Menu mobile -->
+    <div class="mobile-menu" id="mobileMenu" hidden>
+      <a class="mobile-link" href="#inicio">Home</a>
+      <a class="mobile-link" href="#sobre">Sobre</a>
+      <a class="mobile-link" href="#servicos">Serviços</a>
+      <a class="mobile-link" href="#contato">Contato</a>
+      <div class="mobile-cta">
+        <a class="btn btn-primary" id="btnMobileWhats" data-link="whats"
+           href="https://wa.me/5515997897433?text=Ol%C3%A1%20Elvis!%20Vim%20pelo%20site%20e%20quero%20agendar%20uma%20aula%20experimental."
+           target="_blank" rel="noopener">WhatsApp</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- =========================================================
+       HERO — carrossel de fundo + overlay + texto
+       ========================================================= -->
+  <section class="hero hero-bg hero-slider" id="inicio" aria-label="Destaques dos serviços">
+    <!-- Slides de fundo: agora com variável CSS não conflitando ( --slide ) -->
+    <div class="hero-slides" aria-live="polite">
+      <div class="hero-slide is-active" style="--slide: url('/assets/img/hero1.jpg');" aria-hidden="false"></div>
+      <div class="hero-slide"            style="--slide: url('/assets/img/hero2.jpg');" aria-hidden="true"></div>
+      <div class="hero-slide"            style="--slide: url('/assets/img/hero3.jpg');" aria-hidden="true"></div>
+    </div>
+
+    <!-- Degradê escuro para legibilidade -->
+    <div class="hero-overlay" aria-hidden="true"></div>
+
+    <!-- Texto do hero -->
+    <div class="container hero-content">
+      <div class="hero-text">
+        <h1 class="hero-title">TREINOS PERSONALIZADOS<br>PARA RESULTADOS REAIS</h1>
+        <p class="hero-slogan">Viva o seu melhor!</p>
+        <p class="hero-subtitle">Alcance seu melhor desempenho com acompanhamento profissional em Iperó e região.</p>
+        <div class="cta-group">
+          <a class="btn btn-primary btn-lg" id="btnHeroWhats" data-link="whats"
+             href="https://wa.me/5515997897433?text=Ol%C3%A1%20Elvis!%20Vim%20pelo%20site%20e%20quero%20agendar%20uma%20aula%20experimental."
+             target="_blank" rel="noopener">Agendar Aula Experimental</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Controles do carrossel -->
+    <div class="hero-controls">
+      <button class="hero-nav hero-prev" aria-label="Slide anterior">‹</button>
+      <div class="hero-dots" role="tablist" aria-label="Selecionar slide">
+        <button class="dot is-active" data-index="0" aria-label="Ir para slide 1" role="tab"></button>
+        <button class="dot" data-index="1" aria-label="Ir para slide 2" role="tab"></button>
+        <button class="dot" data-index="2" aria-label="Ir para slide 3" role="tab"></button>
+      </div>
+      <button class="hero-nav hero-next" aria-label="Próximo slide">›</button>
+    </div>
+  </section>
+
+  <main>
+    <!-- =========================================================
+         SOBRE
+         ========================================================= -->
+    <section id="sobre" class="section about">
+      <div class="container about-inner">
+        <div class="about-text">
+          <h2 class="section-title">Sobre mim</h2>
+          <p class="about-lead">
+            Educador Físico especializado em musculação e qualidade de vida. Elvis desenvolve treinos personalizados
+            que unem força, saúde e bem‑estar, guiando você de forma segura e científica para alcançar seus melhores
+            resultados e uma vida mais saudável.
+          </p>
+
+          <ul class="about-list" aria-label="Diferenciais">
+            <li><span class="check">✓</span> Treino Personalizado</li>
+            <li><span class="check">✓</span> Personal Online (acompanhamento e ajustes)</li>
+            <li><span class="check">✓</span> Consultoria de Treino</li>
+            <li><span class="check">✓</span> Acompanhamento de Corrida</li>
+          </ul>
+
+          <p class="about-meta">Atendo em <strong>Iperó e região</strong>.</p>
+
+          <div class="cta-group">
+            <a class="btn btn-primary" id="btnSobreWhats" data-link="whats"
+               href="https://wa.me/5515997897433?text=Ol%C3%A1%20Elvis!%20Vim%20pelo%20site%20e%20quero%20agendar%20uma%20aula%20experimental."
+               target="_blank" rel="noopener">Falar no WhatsApp</a>
+            <a class="btn btn-secondary" id="btnSobreInsta" data-link="insta"
+               href="https://www.instagram.com/elvis.godoyy/" target="_blank" rel="noopener">Instagram</a>
+          </div>
+        </div>
+
+        <div class="about-media">
+          <img src="assets/img/hero-elvis.png" alt="Elvis Godoy - Personal" loading="lazy" decoding="async">
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         SERVIÇOS
+         ========================================================= -->
+    <section id="servicos" class="section services">
+      <div class="container">
+        <h2 class="section-title center">Serviços</h2>
+        <p class="section-sub center">Planos e atendimentos para diferentes objetivos</p>
+
+        <div class="service-grid">
+          <!-- Card 1 -->
+          <article class="service-card">
+            <div class="service-icon" aria-hidden="true">
+              <svg width="26" height="26" viewBox="0 0 24 24"><path fill="currentColor" d="M21 11h-1V9a1 1 0 0 0-2 0v2h-4V9a1 1 0 0 0-2 0v2H8V9a1 1 0 0 0-2 0v2H5a1 1 0 0 0 0 2h1v2a1 1 0 0 0 2 0v-2h4v2a1 1 0 0 0 2 0v-2h4v2a1 1 0 0 0 2 0v-2h1a1 1 0 0 0 0-2Z"/></svg>
+            </div>
+            <h3 class="service-title">Personal Presencial</h3>
+            <p class="service-desc">Aulas individuais, correções em tempo real e periodização completa.</p>
+            <a class="btn btn-primary service-cta" data-service="Personal Presencial"
+               href="https://wa.me/5515997897433?text=Ol%C3%A1%20Elvis!%20Vim%20pelo%20site%20e%20tenho%20interesse%20em%20Personal%20Presencial.%20Podemos%20conversar?"
+               target="_blank" rel="noopener">Quero começar</a>
+          </article>
+
+          <!-- Card 2 -->
+          <article class="service-card">
+            <div class="service-icon" aria-hidden="true">
+              <svg width="26" height="26" viewBox="0 0 24 24"><path fill="currentColor" d="M17 10.5V7a2 2 0 0 0-2-2H5C3.9 5 3 5.9 3 7v10c0 1.1.9 2 2 2h10a2 2 0 0 0 2-2v-3.5l4 4v-11l-4 4Z"/></svg>
+            </div>
+            <h3 class="service-title">Personal Online</h3>
+            <p class="service-desc">Planos atualizados semanalmente, contato direto e ajustes por vídeo.</p>
+            <a class="btn btn-primary service-cta" data-service="Personal Online"
+               href="https://wa.me/5515997897433?text=Ol%C3%A1%20Elvis!%20Vim%20pelo%20site%20e%20tenho%20interesse%20em%20Personal%20Online.%20Podemos%20conversar?"
+               target="_blank" rel="noopener">Quero começar</a>
+          </article>
+
+          <!-- Card 3 -->
+          <article class="service-card">
+            <div class="service-icon" aria-hidden="true">
+              <svg width="26" height="26" viewBox="0 0 24 24"><path fill="currentColor" d="M9 2h6a2 2 0 0 1 2 2h1a2 2 0 0 1 2 2v13a3 3 0 0 1-3 3H7a3 3 0 0 1-3-3V6a2 2 0 0 1 2-2h1a2 2 0 1 1 2-2m0 2v2h6V4H9m1 6h8v2h-8v-2m0 4h8v2h-8v-2Z"/></svg>
+            </div>
+            <h3 class="service-title">Consultoria de Treino</h3>
+            <p class="service-desc">Programa sob medida com progressão, feedback e indicadores.</p>
+            <a class="btn btn-primary service-cta" data-service="Consultoria de Treino"
+               href="https://wa.me/5515997897433?text=Ol%C3%A1%20Elvis!%20Vim%20pelo%20site%20e%20tenho%20interesse%20em%20Consultoria%20de%20Treino.%20Podemos%20conversar?"
+               target="_blank" rel="noopener">Quero começar</a>
+          </article>
+
+          <!-- Card 4 -->
+          <article class="service-card">
+            <div class="service-icon" aria-hidden="true">
+              <svg width="26" height="26" viewBox="0 0 24 24"><path fill="currentColor" d="M13.5 5.5A2.5 2.5 0 1 0 11 3a2.5 2.5 0 0 0 2.5 2.5M2 21h3l3-3h3l3-4l-2.5-2L9 14l-2-2l-5 9Z"/></svg>
+            </div>
+            <h3 class="service-title">Acompanhamento de Corrida</h3>
+            <p class="service-desc">Planilhas, ritmos alvo e apoio para provas de 5K a meia maratona.</p>
+            <a class="btn btn-primary service-cta" data-service="Acompanhamento de Corrida"
+               href="https://wa.me/5515997897433?text=Ol%C3%A1%20Elvis!%20Vim%20pelo%20site%20e%20tenho%20interesse%20em%20Acompanhamento%20de%20Corrida.%20Podemos%20conversar?"
+               target="_blank" rel="noopener">Quero começar</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         DEPOIMENTOS / ANTES-DEPOIS com Lightbox (já suportado no JS)
+         ========================================================= -->
+    <section class="section testimonials">
+      <div class="container">
+        <h2 class="section-title center">Resultados e depoimentos</h2>
+
+        <div class="testi-grid">
+          <!-- Antes/Depois (thumbs clicáveis) -->
+          <div class="before-after">
+            <figure class="ba-thumb">
+              <img src="assets/img/before_thumb.png" data-lightbox="assets/img/before.png" alt="Resultado - Antes" loading="lazy" decoding="async">
+              <figcaption class="ba-label">Antes</figcaption>
+              <button class="ba-zoom" aria-label="Ampliar imagem Antes">⤢</button>
+            </figure>
+
+            <figure class="ba-thumb">
+              <img src="assets/img/after_thumb.png" data-lightbox="assets/img/after.png" alt="Resultado - Depois" loading="lazy" decoding="async">
+              <figcaption class="ba-label">Depois</figcaption>
+              <button class="ba-zoom" aria-label="Ampliar imagem Depois">⤢</button>
+            </figure>
+
+            <p class="ba-note">Exemplo ilustrativo. Substitua por fotos reais quando desejar.</p>
+          </div>
+
+          <!-- Depoimentos textuais -->
+          <article class="testi-card">
+            <p class="testi-quote">“Com a metodologia e o apoio do Elvis, perdi <strong>18 kg em 6 meses</strong>. Mais do que um físico novo, ganhei disciplina e autoestima para viver melhor.”</p>
+            <div class="testi-author">— Cliente (Emagrecimento)</div>
+          </article>
+
+          <article class="testi-card">
+            <p class="testi-quote">“Sempre fui muito magro e tinha dificuldade de evoluir. Os treinos do Elvis foram um divisor de águas; ganhei <strong>8 kg de massa muscular</strong> e finalmente tenho o físico que sempre quis.”</p>
+            <div class="testi-author">— Cliente (Ganho de Massa)</div>
+          </article>
+
+          <article class="testi-card">
+            <p class="testi-quote">“As aulas vão muito além da academia. <strong>Melhorei minha postura</strong>, tenho muito mais energia para brincar com meus filhos e lido com o estresse de uma forma completamente nova.”</p>
+            <div class="testi-author">— Cliente (Qualidade de Vida)</div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         FAQ
+         ========================================================= -->
+    <section class="section faq">
+      <div class="container">
+        <h2 class="section-title center">Dúvidas frequentes</h2>
+
+        <div class="faq-list" id="faqList">
+          <details class="faq-item">
+            <summary>Como funciona a aula experimental? <span class="caret" aria-hidden="true">▾</span></summary>
+            <div class="faq-content">Conversa rápida para entender objetivos, avaliação leve de movimentos e treino inicial adaptado ao seu nível. Sem compromisso.</div>
+          </details>
+
+          <details class="faq-item">
+            <summary>Atende em quais locais? <span class="caret" aria-hidden="true">▾</span></summary>
+            <div class="faq-content">Atendo em <strong>Iperó e região</strong>. No online, acompanho clientes de qualquer cidade.</div>
+          </details>
+
+          <details class="faq-item">
+            <summary>Preciso de equipamentos para o treino online? <span class="caret" aria-hidden="true">▾</span></summary>
+            <div class="faq-content">Não necessariamente. Adaptamos com itens simples (elástico, peso corporal). Se houver academia disponível, também montamos o plano completo.</div>
+          </details>
+
+          <details class="faq-item">
+            <summary>Como são feitos os ajustes de treino? <span class="caret" aria-hidden="true">▾</span></summary>
+            <div class="faq-content">Acompanhamento semanal com feedbacks, vídeos e relatório de evolução. Ajusto cargas, volumes e exercícios conforme resposta do seu corpo.</div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         CTA FINAL
+         ========================================================= -->
+    <section class="section cta-final" aria-label="Chamada final">
+      <div class="container cta-box">
+        <div class="cta-text">
+          <h3>Vamos começar seu treino?</h3>
+          <p>Me chame no WhatsApp para agendar sua aula experimental ou tirar dúvidas.</p>
+        </div>
+        <a class="btn btn-primary btn-lg" id="btnCtaFinal" data-link="whats"
+           href="https://wa.me/5515997897433?text=Ol%C3%A1%20Elvis!%20Vim%20pelo%20site%20e%20quero%20agendar%20uma%20aula%20experimental."
+           target="_blank" rel="noopener">Agendar no WhatsApp</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- =========================================================
+       RODAPÉ
+       ========================================================= -->
+  <footer class="site-footer" id="contato">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <!-- O JS também troca a logo aqui conforme tema -->
+        <img id="footerLogo" src="assets/img/logo-light.png" alt="Elvis Godoy" width="120" height="34">
+        <div class="footer-text">
+          <div class="footer-slogan">Viva o seu melhor!</div>
+          <p>© <span id="year"></span> Elvis Godoy • Personal Trainer — Iperó e região</p>
+          <p>Desenvolvido por <a href="#" target="_blank" rel="noopener">Cleberson Godoy</a></p>
+        </div>
+      </div>
+
+      <nav class="footer-nav" aria-label="Rodapé">
+        <div class="footer-links" aria-label="Atalhos">
+          <a href="#sobre">Sobre</a>
+          <a href="#servicos">Serviços</a>
+          <a href="#inicio">Topo</a>
+        </div>
+        <div class="socials" aria-label="Redes sociais">
+          <a id="footerInsta" data-link="insta" href="https://www.instagram.com/elvis.godoyy/" target="_blank" rel="noopener" title="Instagram" aria-label="Instagram">
+            <!-- Instagram SVG -->
+            <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path fill="currentColor" d="M7 2h10a5 5 0 015 5v10a5 5 0 01-5 5H7a5 5 0 01-5-5V7a5 5 0 015-5zm0 2a3 3 0 00-3 3v10a3 3 0 003 3h10a3 3 0 003-3V7a3 3 0 00-3-3H7zm5 3.5a5.5 5.5 0 110 11 5.5 5.5 0 010-11zm0 2a3.5 3.5 0 100 7 3.5 3.5 0 000-7zM18 6.8a1 1 0 110 2 1 1 0 010-2z"/></svg>
+          </a>
+          <a id="footerWhats" data-link="whats" href="https://wa.me/5515997897433?text=Ol%C3%A1%20Elvis!%20Vim%20pelo%20site%20e%20quero%20agendar%20uma%20aula%20experimental." target="_blank" rel="noopener" title="WhatsApp" aria-label="WhatsApp">
+            <!-- WhatsApp SVG -->
+            <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path fill="currentColor" d="M20.52 3.48A11.86 11.86 0 0012.06 0C5.48 0 .2 5.25.2 11.74a11.5 11.5 0 001.56 5.8L0 24l6.65-1.73a12.05 12.05 0 005.41 1.31h.01c6.58 0 11.94-5.25 11.94-11.74 0-3.14-1.28-6.09-3.49-8.36zM12.07 21.4h-.01a9.96 9.96 0 01-5.07-1.39l-.36-.21-3.95 1.03 1.06-3.85-.24-.4A9.5 9.5 0 1121.57 12c0 5.25-4.42 9.4-9.5 9.4zm5.5-7.24c-.3-.15-1.77-.87-2.05-.97-.27-.1-.46-.15-.66.15-.2.3-.76.97-.93 1.18-.17.2-.34.22-.64.07-.3-.15-1.26-.46-2.41-1.48-.89-.77-1.49-1.72-1.66-2.02-.17-.3-.02-.46.13-.61.13-.13.3-.34.44-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.66-1.6-.9-2.18-.24-.58-.48-.5-.66-.5h-.56c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.87 1.22 3.07c.15.2 2.1 3.2 5.08 4.48.71.31 1.26.49 1.69.63.71.22 1.35.19 1.86.12.57-.08 1.77-.72 2.02-1.41.25-.7.25-1.3.17-1.41-.07-.11-.27-.18-.57-.33z"/></svg>
+          </a>
+        </div>
+      </nav>
+    </div>
+  </footer>
+
+  <!-- Botão flutuante do WhatsApp (sobe quando o footer aparece) -->
+  <a class="float-whats" id="floatWhats" data-link="whats"
+     href="https://wa.me/5515997897433?text=Ol%C3%A1%20Elvis!%20Vim%20pelo%20site%20e%20quero%20agendar%20uma%20aula%20experimental."
+     target="_blank" rel="noopener" aria-label="Falar no WhatsApp">💬</a>
+
+  <!-- ===================== JS ===================== -->
+  <script src="js/main.js" defer></script>
+</body>
+</html>

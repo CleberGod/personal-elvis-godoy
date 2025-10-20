@@ -1,0 +1,37 @@
+# Força HTTPS e sem www (troque pelo seu domínio, se preferir fixo)
+RewriteEngine On
+RewriteCond %{HTTPS} !=on [OR]
+RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
+RewriteRule ^ https://%1%{REQUEST_URI} [L,R=301]
+
+# Compressão Gzip
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/plain text/html text/css text/javascript application/javascript application/json application/xml image/svg+xml
+</IfModule>
+
+# Brotli (se disponível no plano)
+<IfModule mod_brotli.c>
+  BrotliCompressionQuality 5
+  AddOutputFilterByType BROTLI_COMPRESS text/plain text/html text/css text/javascript application/javascript application/json application/xml image/svg+xml
+</IfModule>
+
+# Cache estático (ajuste prazos se quiser)
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType text/css "access plus 30 days"
+  ExpiresByType application/javascript "access plus 30 days"
+  ExpiresByType image/avif "access plus 180 days"
+  ExpiresByType image/webp "access plus 180 days"
+  ExpiresByType image/jpeg "access plus 180 days"
+  ExpiresByType image/png "access plus 180 days"
+  ExpiresByType image/svg+xml "access plus 180 days"
+  ExpiresDefault "access plus 7 days"
+</IfModule>
+<IfModule mod_headers.c>
+  <FilesMatch "\.(avif|webp|jpg|jpeg|png|svg|gif)$">
+    Header set Cache-Control "public, max-age=15552000, immutable"
+  </FilesMatch>
+  <FilesMatch "\.(css|js)$">
+    Header set Cache-Control "public, max-age=2592000"
+  </FilesMatch>
+</IfModule>

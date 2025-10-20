@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Página principal -->
+  <url>
+    <loc>https://www.seusite.com.br/</loc>
+    <lastmod>2025-08-23</lastmod>
+    <priority>1.0</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+
+  <!-- Seções âncora principais (opcional, alguns motores ignoram) -->
+  <url>
+    <loc>https://www.seusite.com.br/#sobre</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.seusite.com.br/#servicos</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.seusite.com.br/#contato</loc>
+    <priority>0.8</priority>
+  </url>
+</urlset>
